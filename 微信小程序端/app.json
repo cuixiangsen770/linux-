@@ -1,0 +1,49 @@
+{
+  "pages": [
+        "pages/personchat/personchat",
+        "pages/index/index",
+      "pages/groupchat/groupchat",
+
+    "pages/group/group",
+  
+      "pages/my/my",
+    "pages/login/login",
+ 
+    "pages/userinfo/userinfo",
+      "pages/chat/chat",
+
+  
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "linux",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#f18947",
+    "list": [
+      {
+        "pagePath": "pages/personchat/personchat",
+        "text": "私聊",
+        "iconPath": "/images/c.png",
+        "selectedIconPath": "/images/c1.png"
+      },
+      {
+        "pagePath": "pages/groupchat/groupchat",
+        "text": "群聊",
+        "iconPath": "/images/g.png",
+        "selectedIconPath": "/images/g1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/p.png",
+        "selectedIconPath": "/images/p1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

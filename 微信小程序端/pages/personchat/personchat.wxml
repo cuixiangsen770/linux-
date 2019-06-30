@@ -1,0 +1,20 @@
+<view class="chatcontainer chat">
+
+<!--这是聊天列表模板-->
+<view wx:for="{{user}}">
+  <view class="chat-item flex-wrp">
+    <view class="avatar flex-item">
+      <image src="{{item.avatar}}" data-id="{{item.name}}" catchtap='gotouserinfo'></image>
+    </view>
+    <view class="chat-content flex-item" catchtap='gotochat' data-id="{{item.avatar}}" data-text="{{item.name}}">
+      <view class="chat-source">
+        <text class="chatmate">{{item.name}}</text>
+        <text class="lasttime">{{item.status}}</text>
+      </view>
+      <text class="chat-txt">个性签名：{{item.qian}}</text>
+    </view>
+  </view>
+</view>
+
+
+</view>

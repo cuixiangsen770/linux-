@@ -1,0 +1,68 @@
+<!-->
+<swiper indicator-dots="{{indicatorDots}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+      <block wx:for="{{imgUrls}}">  
+        <swiper-item>  
+           <view bindtap='{{item.link}}' hover-class="navigator-hover">  
+            <image src="{{item.url}}" class="slide-image" />  
+           </view>   
+        </swiper-item>  
+      </block>  
+</swiper>   
+</-->
+
+<view class='scorll'>
+<scroll-view  selectable="true" scroll-y="true" class='scrolly'scroll-top="{{scrollTop}}">      
+    <view wx:for="{{msgs}}">  
+       
+
+            <block wx:if="{{item.send != userInfo.nickName}}">
+           <view style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{item.avatar}}'></image>
+        </view>
+        <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+    
+<image style='width: 4vw;' src="" mode='widthFix'></image>
+
+        </view>
+        <view class='leftMsg'>{{item.message}}</view>
+      </view>
+            </block>  
+
+            <block wx:if="{{item.send == userInfo.nickName}}">
+    <view  style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+        <view class='rightMsg'>{{item.message}}</view>
+        <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='' mode='widthFix'></image>
+        </view>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{userInfo.avatarUrl}}'></image>
+        </view>
+      </view>
+            </block>  
+    </view>  
+
+
+
+</scroll-view>  
+</view>
+<!-- 底部固定 -->
+    <view style="position:fixed;  bottom:0;width:100%;">  
+    <input type="text" class="input-text" bindchange="setInputValue"  placeholder="linux群聊" value="{{inputdata}}"/>  
+    <button bindtap="getgetinputSEnd" class="input-button">发送</button> 
+</view>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

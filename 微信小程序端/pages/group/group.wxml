@@ -1,0 +1,40 @@
+  
+         <view class="feed-item" wx:for="{{group}}">
+            <view class="feed-source">
+                <a class="">
+                    <view class="avatar">
+                        <image src="{{item.avatar}}"></image>
+                    </view>
+                    <text>{{item.host}} {{item.groupid}}</text>
+                </a>
+                <image class="item-more" mode="aspectFit" src=""></image>
+            </view>
+            <view class="feed-content">
+                <view class="question">
+                    <a class="question-link" catchtap='gotogroupchat'>
+                        <text>群名称：{{item.groupname}}</text>
+                    </a>
+                </view>
+
+
+                <view class="answer-body">
+                    <view bindtap="bindItemTap">
+    <text class="answer-txt"  catchtap='gotogroupchat'  >群简介：{{item.groupinfo}}</text>
+                    </view>
+                    <view class="answer-actions" bindtap="bindItemTap">
+                        <view class="like dot">
+                            <a>{{item.chatnum}}消息 </a>
+                        </view>
+                        <view class="comments dot">
+                            <a>{{item.viewnum}}访问量 </a>
+                        </view>
+                        <view class="follow-it">
+                            <a>查看历史消息</a>
+                        </view>
+                    </view>
+                </view>
+
+
+
+            </view>
+        </view>

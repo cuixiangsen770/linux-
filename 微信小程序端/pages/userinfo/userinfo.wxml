@@ -1,0 +1,81 @@
+<view class="containerr" wx:for="{{userinfo}}">
+
+
+    <view class="user-wechat-info">
+      <!--头像渲染-->
+      <view class='avatar'>
+        <image src="{{item.avatar}}"></image>
+      </view>
+      <view class="nick-name">{{item.name}}</view>
+  </view>
+  
+  <view class="more-list" >
+  
+      <view class="more-btn" bindtap='gotoadmin'>
+        <image class="btn-icon" src="/images/name.png"></image>
+        <text class="btn-text">手机号：{{item.phone}}</text>
+        <view class="btn-open">
+            <image class="btn-enter" src="/images/enter.png"></image>
+        </view>
+      </view>
+
+     <view class="more-btn" bindtap='gotochatlist'>
+        <image class="btn-icon" src="/images/sex.png"></image>
+        <text class="btn-text">性别：{{item.sex}}</text>
+        <view class="btn-open">
+            <image class="btn-enter" src="/images/enter.png"></image>
+        </view>
+      </view>
+
+        <view class="more-btn" bindtap='gotochatlist'>
+        <image class="btn-icon" src="/images/pwd.png"></image>
+        <text class="btn-text">密码：{{item.pwd}}</text>
+        <view class="btn-open">
+            <image class="btn-enter" src="/images/enter.png"></image>
+        </view>
+      </view>
+
+     <view class="more-btn" bindtap='gotochatlist'>
+        <image class="btn-icon" src="/images/qian.png"></image>
+        <text class="btn-text">签名：{{item.qian}}</text>
+        <view class="btn-open">
+            <image class="btn-enter" src="/images/enter.png"></image>
+        </view>
+      </view>
+
+
+  </view>
+
+ 
+
+
+
+
+<!-- 免费咨询 -->
+<view class="gratis"><text>温馨提示</text></view>
+<!--提示  -->
+<view class="prompt">
+    <view class="prompt-title">
+        <text>【提示】</text>
+        <text>唯一公网ip:212.64.122.38</text>
+    </view>
+     <view class="prompt-title" catchtap='copyText' data-text="神农架开发团队">
+        <text>【反馈】</text>
+        <text>有问题可点此复制技术人员微信号</text>
+    </view>
+</view>
+
+  <!--button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="login-btn">
+    <text>授权登陆</text>
+  </button-->
+<view class='wxbottom'>
+  <button  open-type="share" class="login-btn">
+    <text>分享</text>
+  </button>
+
+  <button class="login-btnn" catchtap='record' open-type='contact'>
+    <text>客服</text>
+  </button>
+</view>
+
+</view>
